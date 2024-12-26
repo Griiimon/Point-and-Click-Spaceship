@@ -1,0 +1,18 @@
+[gd_scene load_steps=2 format=3 uid="uid://cfr5rhoiqjk7n"]
+
+[ext_resource type="Script" path="res://player.gd" id="1_7i546"]
+
+[node name="Game" type="Node2D"]
+
+[node name="Player" type="RigidBody2D" parent="."]
+position = Vector2(344, 248)
+linear_damp_mode = 1
+linear_damp = 1.0
+script = ExtResource("1_7i546")
+acceleration = 500.0
+
+[node name="Polygon2D" type="Polygon2D" parent="Player"]
+polygon = PackedVector2Array(-24, -16, 40, 0, -24, 16, -16, 0)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Player"]
+polygon = PackedVector2Array(-24, -16, 40, 0, -24, 16)
